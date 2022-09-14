@@ -3,7 +3,11 @@
     :class="{large}"
     :style="{backgroundColor: color}"
     class="btn">
-    <slot></slot>
+    <!-- <slot>Button</slot> -->
+    <!-- Fallback(대체) contents : <MyBtn></MyBtn>컴포넌트 사이에 다른 텍스트가 없으면 <slot></slot>태그 안에 있는 텍스트 출력됨-->
+    <!-- 상속하는 App.vue에서 순서를 바꾸어도 컴포넌트 내에서 순서를 지정하였기 때문에, 순서를 보장함 -->
+    <slot name="icon"></slot>
+    <slot name="text"></slot>
   </div>
   <h1 v-bind="$attrs"></h1>
   <!-- <h1

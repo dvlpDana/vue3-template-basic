@@ -32,7 +32,10 @@
     <span style="color: red;">Banana</span>
   </MyBtn>
   <!-- 컴포넌트에 연결하는 이벤트의 이름은 실제로 사용하는 이벤트의 이름이 아니어도 상관없음 -->
-  <MyBtn large @Dana="log" @change-msg="logMsg">
+  <MyBtn
+    large
+    @Dana="log"
+    @change-msg="logMsg">
     Apple
   </MyBtn>
   <MyBtn color="royalblue">
@@ -40,6 +43,14 @@
   </MyBtn>
   <MyBtn :color="color">
     Melon
+  </MyBtn>
+  <MyBtn>
+    <template #icon>
+      <span>Banana</span>
+    </template>
+    <template #text>
+      <span>(B)</span>
+    </template>
   </MyBtn>
 </template>
 
